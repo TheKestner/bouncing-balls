@@ -60,6 +60,8 @@ class Ball {
     }
 }
 
+// Array to store balls to be animated to the canvas
+
 const balls = [];
 
     while (balls.length < 25) {
@@ -78,6 +80,8 @@ const balls = [];
         ball.push(ball)
     }
 
+    // animation loop
+
     function loop() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
         ctx.fillRect(0, 0, width, height);
@@ -89,3 +93,5 @@ const balls = [];
 
         requestAnimationFrame(loop);
     }
+
+    loop();
