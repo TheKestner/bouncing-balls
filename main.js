@@ -66,7 +66,7 @@ const balls = [];
 
     while (balls.length < 25) {
         const size = random(10,20);
-        const ball = new ball(
+        const ball = new Ball(
             // ball position always drawn at least one ball width
             //away from the edge of the canvas, to avoid drawing errors
         random(0 + size, width - size),
@@ -77,7 +77,7 @@ const balls = [];
         size    
         );
 
-        ball.push(ball)
+        ball.push(ball);
     }
 
     // animation loop
