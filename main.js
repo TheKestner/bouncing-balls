@@ -64,34 +64,34 @@ class Ball {
 
 const balls = [];
 
-    while (balls.length < 25) {
-        const size = random(10,20);
-        const ball = new Ball(
-            // ball position always drawn at least one ball width
-            //away from the edge of the canvas, to avoid drawing errors
+while (balls.length < 25) {
+    const size = random(10,20);
+    const ball = new Ball(
+        // ball position always drawn at least one ball width
+        //away from the edge of the canvas, to avoid drawing errors
         random(0 + size, width - size),
         random(0 + size, height - size),
         random(-7,7),
         random(-7,7),
         randomRGB(),
         size    
-        );
+    );
 
-        ball.push(ball);
+     ball.push(ball);
     }
 
-    // animation loop
+// animation loop
 
-    function loop() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-        ctx.fillRect(0, 0, width, height);
+function loop() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.fillRect(0, 0, width, height);
 
-        for (const ball of balls) {
+    for (const ball of balls) {
             ball.draw();
             ball.update();
-        }
-
-        requestAnimationFrame(loop);
     }
 
-    loop();
+    requestAnimationFrame(loop);
+}
+
+loop();
