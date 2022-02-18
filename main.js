@@ -77,7 +77,7 @@ while (balls.length < 25) {
         size    
     );
 
-     ball.push(ball);
+     balls.push(ball);
     }
 
 // animation loop
