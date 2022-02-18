@@ -40,17 +40,23 @@ class Ball {
     }
 
     update() {
+            // checks to see if ball is going off the right edge
+
         if ((this.x + this.size) >= width){
             this.velX = -(this.velX);
         }
+            // checks to see if ball is going off the left edge
 
         if ((this.x - this.size) <= 0) {
             this.velX = -(this.velX);
         }
+            // checks to see if ball is going off the bottom edge
 
         if ((this.y + this.size) >= height) {
             this.velY = -(this.velY);
         }
+            // checks to see if ball is going off the top edge
+
         if ((this.y - this.size) <= 0) {
             this.velY = -(this.velY);
         }
@@ -59,6 +65,8 @@ class Ball {
         this.y += this.velY;
     }
 
+        // checks to see if two different balls pass through one another
+        // if true then changes to randomRGB color
     collisionDetect() {
         for (const ball of balls) {
             if(!(this === ball)) {
