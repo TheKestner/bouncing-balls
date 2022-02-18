@@ -51,7 +51,7 @@ class Ball {
         if ((this.y + this.size) >= height) {
             this.velY = -(this.velY);
         }
-        if ((this.y - this.size) <=0) {
+        if ((this.y - this.size) <= 0) {
             this.velY = -(this.velY);
         }
 
